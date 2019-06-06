@@ -6,6 +6,11 @@
   tags:
     - skip_ansible_lint
 
+- name: Kill SSH
+  shell: "sleep 1; pkill -u {{ ansible_ssh_user }} sshd"
+  async: 3
+  poll: 2
+
 # ulimit needs full shell
 - name: Register number of file descriptors
   shell: "ulimit -n"
