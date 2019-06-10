@@ -21,8 +21,12 @@ def fluentd_params_to_text(params):
                 config += "{0} {1}\n  ".format(
                     key, val.join(', '))
         elif type(val) is dict:
-            config += "<{0}>\n  {1}</{0}>\n  ".format(
-                key, fluentd_params_to_text(val))
+            if key == "buffer":
+                config += "<{0} tag,container_name>\n  {1}</{0}>\n  ".format(
+                    key, fluentd_params_to_text(val))
+            else:
+                config += "<{0}>\n  {1}</{0}>\n  ".format(
+                    key, fluentd_params_to_text(val))
         else:
             config += "{0} {1}\n  ".format(key, val)
  
