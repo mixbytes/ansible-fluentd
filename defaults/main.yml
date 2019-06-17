@@ -1,4 +1,5 @@
 ---
+fluentd_outputs_dir: "/var/log/fluentd"
 fluentd_sources_conf: []
 # fluentd_sources_conf:
 #   - "type": forward

@@ -5,3 +5,5 @@ go_arch_map:
   aarch64: 'arm64'
   armv7l: 'armv7'
   armv6l: 'armv6'
+
+fluentd_user: "td-agent"

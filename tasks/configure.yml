@@ -1,13 +1,14 @@
 ---
 - name: Create td-agent directories
   file:
-    path: /etc/td-agent/conf.d
+    path: "{{ item }}"
     state: directory
     owner: td-agent
     group: td-agent
   with_items:
     - /opt/td-agent
     - /etc/td-agent/conf.d
+    - "{{ fluentd_outputs_dir }}"
 
 - name: Create main configuration file
   template:
