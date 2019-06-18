@@ -25,4 +25,5 @@
   service:
     name: td-agent
     enabled: true
+    state: started
     use: service
