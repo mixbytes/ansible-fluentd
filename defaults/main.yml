@@ -1,4 +1,5 @@
 ---
+file_descriptors_check: "disable"
 fluentd_outputs_dir: "/var/log/fluentd"
 fluentd_sources_conf: []
 # fluentd_sources_conf:
