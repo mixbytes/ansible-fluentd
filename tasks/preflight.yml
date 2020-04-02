@@ -5,6 +5,7 @@
   changed_when: false
   tags:
     - skip_ansible_lint
+  check_mode: false
 
 # ulimit needs full shell
 - name: Register number of file descriptors
@@ -13,6 +14,7 @@
   changed_when: false
   tags:
     - skip_ansible_lint
+  check_mode: false
 
 - name: Fail on desynchronized time
   fail:
